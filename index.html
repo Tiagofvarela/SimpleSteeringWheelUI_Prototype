@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+    <title>inCar / HUD</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="ecraHELP1/help1Styles.css">
+    <link rel="stylesheet" type="text/css" href="ecraHELP2/help2Styles.css">
+    <link rel="stylesheet" type="text/css" href="ecraINFO/infoVeiculoStyles.css">
+    <link rel="stylesheet" type="text/css" href="ecraRADIO/radioStyles.css">
+    <link rel="stylesheet" type="text/css" href="ecraRADIO/estacaoStyles.css">
+    <link rel="stylesheet" type="text/css" href="ecraCHAMADAS/chamadasStyles.css">
+    <link rel="stylesheet" type="text/css" href="ecraCHAMADAS/contactosStyles.css">
+    <link rel="stylesheet" type="text/css" href="ecraCHAMADAS/emChamadaStyles.css">
+    <link rel="stylesheet" type="text/css" href="ecraGPS/gpsStyles.css">
+    <link rel="stylesheet" type="text/css" href="ecraGPS/escritaStyles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <!-- SCRIPTS -->
+    <script src="jquery-3.4.0.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="ecraHELP1/help1Controller.js"></script>
+    <script src="ecraHELP2/help2Controller.js"></script>
+    <script src="ecraINFO/infoVeiculoController.js"></script>
+    <script src="ecraRADIO/radioController.js"></script>
+    <script src="ecraRADIO/estacaoController.js"></script>
+    <script src="ecraCHAMADAS/contactosController.js"></script>
+    <script src="ecraCHAMADAS/emChamadaController.js"></script>
+    <script src="ecraCHAMADAS/chamadasController.js"></script>
+    <script src="ecraGPS/gpsController.js"></script>
+    <script src="ecraGPS/escritaController.js"></script>
+    <script src="core.js"></script>
+</head>
+<body>
+    <div id="app">
+
+            <div class="top-space">
+                &nbsp;
+            </div>
+        
+            <div class="main-content">
+                <div class="hud-container">
+                    <div class="hud-icons" id="hud-icons-container">
+                        <!-- icons dos ecrãs do HUD -->
+                    </div>
+                    <div class="hud-screen" id="hud-screen-container-outer">
+                        <div class="hud-screen-top-bar" id="hud-screen-top-bar" style="display: none;">
+                            <div class="breadcrumbs" id="breadcrumbs">&nbsp;</div>
+                            <div class="indicadores-actividade" id="indicadores-actividade">&nbsp;</div>
+                        </div>
+                        <div id="hud-screen-container-inner">
+                            <!-- html dos ecrãs do HUD -->
+                        </div>
+                    </div>
+                </div>
+                <div class="controlador-container">
+                    <div class="controlador-object">
+                        <!-- <img class="controlador-img" id='controlador' src="img/controlador_01.png" usemap="#image-map">
+                        <map name="image-map">
+                            <area target="" alt="OK" title="OK" href="javascript:void(0)" coords="95,134,77,132,76,64,218,66,223,74,223,125,171,124,171,134,132,133,130,94,96,95" shape="poly" onclick="HUD.accoes.clickOK();">
+                            <area target="" alt="CANCEL" title="CANCEL" href="javascript:void(0)" coords="222,211,76,213,74,146,95,144,95,183,131,182,132,145,166,145,167,150,221,150" shape="poly" onclick="HUD.accoes.clickBack();">
+                            <area target="" alt="SCROLL" title="SCROLL - RODA" href="javascript:void(0)" coords="98,96,127,181" shape="rect" onwheel="HUD.accoes.scroll(event);">
+                            <area target="" alt="ON/OFF" title="ON/OFF" href="javascript:void(0)" coords="173,150,222,125" shape="rect" onclick="HUD.accoes.clickONOFF();">
+                        </map> -->
+                        <img class="controlador-img" id='controlador' src="img/controlador_02.png" usemap="#image-map">
+                        <map name="image-map">
+                            <area target="" alt="RODA" title="RODA" href="javascript:void(0);" coords="132,92,163,172" shape="rect" onwheel="HUD.accoes.scroll(event);">
+                            <area target="" alt="TERMINAR CHAMADA" title="TERMINAR CHAMADA" href="javascript:void(0);" coords="212,100,269,122" shape="rect" onclick="HUD.accoes.clickHANGUP();">
+                            <area target="" alt="ON/OFF" title="ON/OFF" href="javascript:void(0);" coords="115,12,163,27" shape="rect" onclick="HUD.accoes.clickONOFF();">
+                            <area target="" alt="ESQUERDA" title="ESQUERDA" href="javascript:void(0);" coords="114,71,145,57,145,83" shape="poly" onclick="HUD.accoes.clickLEFT();">
+                            <area target="" alt="DIREITA" title="DIREITA" href="javascript:void(0);" coords="153,58,180,70,152,86" shape="poly" onclick="HUD.accoes.clickRIGHT();">
+                            <area target="" alt="OK" title="OK" href="javascript:void(0);" coords="86,25,108,21,108,31,165,31,168,21,269,23,270,95,210,99,207,106,168,108,168,87,189,68,149,52,106,70,126,87,126,109,86,107" shape="poly" onclick="HUD.accoes.clickOK();">
+                            <area target="" alt="VOLTAR" title="VOLTAR" href="javascript:void(0);" coords="85,120,128,118,127,177,168,176,169,120,205,122,207,130,268,129,267,209,86,209" shape="poly" onclick="HUD.accoes.clickBack();">
+                        </map>
+                        <i class="fas fa-arrow-down on-off-arrow"></i>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+    <script>
+        HUD.setUp();
+    </script>
+</body>
+</html>
