@@ -2,7 +2,7 @@
 
 Developed by Manuel Tomás, Rui Fartaria, Tiago Varela, Tomás Branco for a University Human Computer Interaction course focused on paper prototyping and data gathering from user tests.
 
-This page hosts the HTML, CSS, and Javascript implementation component of the project.
+***[This page hosts](https://tiagofvarela.github.io/SimpleSteeringWheelUI_Prototype/)*** the HTML, CSS, and Javascript implementation component of the project.
 
 ## Explanation
 
