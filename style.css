@@ -1,0 +1,121 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    color: white;
+    line-height: 35pt;
+  }
+
+
+#app {
+    width: 950px;
+    margin: auto;
+}
+
+.top-space {
+    height: 100px;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.hud-container {
+    /* background-color: rgb(236, 236, 236); */
+    background-color: rgba(255,255,255,0.1);
+    grid-column: 1;
+    height: 350px;
+    display: grid;
+    grid-template-columns: 70px auto;
+}
+
+.controlador-container {
+    /* background-color: rgb(253, 255, 231); */
+    background-color: rgba(255,255,255,0.0);
+    grid-column: 2;
+}
+
+.hud-icons-container {
+    grid-column: 1;
+}
+
+.hud-icon {
+    height: 70px;
+    background-color: rgba(245, 245, 220,0.2);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.hud-icon-active {
+    /* border: 1px;
+    border-style: solid;
+    border-color: black; */
+    /* background-color: rgba(172, 255, 164,0.3); */
+    color: rgba(70, 57, 255, 0.61);
+    background: rgba(255,255,255,0.4)
+}
+
+.hud-screen {
+    border: 0px;
+    padding: 10px;
+}
+
+.hud-screen-active {
+    border: 4px;
+    border-style: solid;
+    border-color: white;
+}
+
+.controlador-object {
+    padding-left: 20px;
+    padding-top: 60px;
+    position: relative;
+}
+
+.estado-ecra {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    color: white;
+}
+
+html { 
+    background: url(img/driving_03.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+ .opcao-seleccionada {
+    color: rgba(70, 57, 255, 0.61);
+    font-weight: bold;
+    background: rgba(255,255,255,0.4)
+}
+
+.breadcrumbs {
+    font-size: 10pt;
+    grid-column: 1;
+}
+
+.breadcrumbs span {
+    font-size: inherit;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.indicadores-actividade {
+    grid-column: 2;
+    text-align: right;
+}
+
+.hud-screen-top-bar {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+i.on-off-arrow {
+    position: absolute;
+    left: 150px;
+    top: 45px;
+    font-size: 16pt;
+}
+

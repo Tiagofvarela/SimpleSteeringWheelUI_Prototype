@@ -1,0 +1,34 @@
+/* CSS específico do ecrã */
+/* usar prefixo adequado para todas as classes */
+
+#barra_de_texto {
+    background-color: slategray;
+}
+
+.column.barra_e_sugestoes {
+    float: left;
+    width: 70%;
+}
+
+.column.escrita{
+    float: right;
+    width: 20%;
+}
+
+#alfabeto li {
+    list-style-type: none;
+    font-size: 18pt;
+    line-height: 1.3;
+}
+
+#lista-sugestoes li {
+    font-size: 18pt;
+    line-height: 1.55;
+}
+
+/*@media screen and (max-width: 600px) {
+    .column.column.barra_de_texto, .column.sugestoes {
+      width: 100%;
+    }
+}*/
+
